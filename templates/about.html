@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+    <style>
+body{
+margin:0;
+overflow-x:hidden;
+}
+
+.footer{
+background:#000;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+        .logo {
+            width: 50px;
+            height: 50px;
+            color: black;
+            margin-top: 0;
+            margin-left: 2px;
+        }
+
+
+
+ .myimg1 {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+.container{
+height=500px;
+width:1200px;
+background-color:white;
+        }
+body{
+background-image: url("static/image3.jpeg");
+background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+    }
+    </style>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+ <!-- Logo at the top-left corner -->
+            <div   class="logo">
+                <img class="myimg1" src="{{ url_for('static', filename='img.png') }}" alt="">
+            </div>
+
+            <a  class="navbar-brand" color="red"  href="#" ><b><i>Health Center</i></b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  href="/index"><h5>Home</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about"><h5>About</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact"><h5>Contact</h5></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog"><h5>Blog</h5></a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="/ayurveda"><h5>Ayurveda</h5></a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4 mt-4">
+
+
+     <div style="background-color:#f174d2d6 ;height:80px ;text-align:center;padding-top:20px">
+<h1> <strong> ABOUT US</strong>
+</h1>
+    </div>
+<br>
+<p>Welcome to Medical Health center, where health meets technology for a brighter, healthier future.
+</p>
+<h3>Our Vision</h3>
+
+<p>We envision a world where access to healthcare information is not just a luxury but a fundamental right. Our journey began with a simple yet powerful idea: to empower individuals with the knowledge and tools they need to take control of their health.
+</p>
+        <p><h3>What We Offer</h3></p>
+        <li>
+            <strong>Personalized Health Recommendations: </strong>Using cutting-edge technology, we analyze your lifestyle, habits, and health conditions to provide you with actionable advice and recommendations
+        </li>
+        <li><strong>Expert Guidance:</strong> Our team consists of doctors, nutritionists, fitness experts, and mental health professionals who contribute their knowledge to guide you through your health journey.</li>
+        <li><strong>Evidence-Based Resources:</strong> All our recommendations are grounded in the latest scientific research and best practices to ensure that the advice you receive is both accurate and reliable.</li>
+        <li><strong>Community Support:</strong> Join a supportive community of people who share similar health goals and challenges. Together, we can motivate and encourage each other to live our best lives.
+
+</li>
+        <br>
+<h3>Who We Are
+</h3>
+<p>We are a passionate team of healthcare professionals, data scientists, and technology enthusiasts who share a common goal: to make healthcare accessible, understandable, and personalized for you. With years of experience in both healthcare and cutting-edge technology, we've come together to create this platform as a testament to our commitment to your well-being.
+</p>
+<h3>Our Mission</h3>
+
+<p>At this website, our mission is to provide you with a seamless and intuitive platform that leverages the power of artificial intelligence and machine learning. We want to assist you in identifying potential health concerns based on your reported symptoms, all while offering a wealth of educational resources to enhance your health literacy.
+</p>
+<h3>How We Do It</h3>
+
+<p>Our platform utilizes a robust machine learning model trained on a vast dataset of symptoms and diseases. By inputting your symptoms, our system generates accurate predictions about potential illnesses, allowing you to make informed decisions about your health.
+</p>
+<h3>Your Well-being, Our Priority</h3>
+
+<p>Your health is our top priority. We understand that navigating the complexities of healthcare can be daunting. That's why we've gone the extra mile to provide not only accurate predictions but also comprehensive information about each disease. You'll find descriptions, recommended precautions, medications, dietary advice, and workout tips to support your journey to better health.
+</p>
+<h3>Join Us on this Journey
+</h3>
+<p>We invite you to explore our platform, engage with our educational content, and take control of your health journey. Together, we can revolutionize the way individuals access and understand healthcare information.
+</p>
+        <p>Thank you for choosing <strong>Health Care Center</strong> as your trusted health companion. We are here to empower you with knowledge, support, and a brighter, healthier future.
+</p>
+        <br>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+
+    </div>
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+</head>
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+
+</div>
+<h5 style="color:white">medicalrecommendation223@gmail.com</h5>
+            <h5 style="color:white">+91 9145657823</h5>
+<div class="row">
+<ul>
+    <li><a href="/contact"><h5>Contact us</h5></a></li>
+    <li><a href="/index"><h5>Our Services</h5></a></li>
+    <li><a href="/blog"><h5>Blogs</h5></a></li>
+<li><a href="/ayurveda"><h5>Aurveda</h5></a></li>
+</ul>
+</div>
+
+<div style="margin-left:35%" class="row">
+INFERNO Copyright © 2025 Inferno - All rights reserved || Designed By: Priya
+</divstyle>
+</div>
+</footer>
+
+</html>

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog Post</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+    <style>
+         body{
+margin:0;
+overflow-x:hidden;
+}
+
+.footer{
+background:#000;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+            .card-group{
+      margin-left:20px;
+      margin-right:20px;
+      margin-bottom:30px;
+
+      }
+  .card{
+      margin-left:20px;
+      margin-right:20px;
+      }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            color: black;
+            margin-top: 0;
+            margin-left: 2px;
+        }
+
+        .myimg {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+
+ .myimg1 {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+
+.container{
+height=500px;
+width:1200px;
+background-color:white;
+        }
+        body{
+background-image: url("static/image3.jpeg");
+background-size: cover;
+
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+    }
+
+    </style>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+ <!-- Logo at the top-left corner -->
+            <div   class="logo">
+                <img class="myimg1" src="{{ url_for('static', filename='img.png') }}" alt="">
+            </div>
+
+            <a  class="navbar-brand" color="red"  href="#" ><b><i>Health Center</i></b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  href="/index"><h5>Home</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about"><h5>About</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact"><h5>Contact</h5></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog"><h5>Blog</h5></a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="/ayurveda"><h5>Ayurveda</h5></a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4 mt-4">
+        <div style="background-color:#f174d2d6 ">
+
+        <h1 class="text-center"> Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</h1>
+        </div>
+            <br>
+        <p>In the age of technology and information, access to accurate and timely healthcare is more critical than ever. With the increasing importance of remote healthcare solutions, we embarked on a journey to develop a symptom-based disease diagnosis web application. Leveraging Flask for the backend and a Decision Tree Classifier model, we created a user-friendly platform that can help users identify potential illnesses based on their reported symptoms.</p>
+<br>
+        <h3>The Problem</h3>
+        <p>The project began with recognizing a common issue: people often experience symptoms and want quick answers about their health concerns. It can be challenging to differentiate between various diseases, especially when symptoms overlap. Our goal was to provide a convenient solution for users to input their symptoms and receive potential diagnoses.</p>
+
+        <h3>The Solution</h3>
+        <p>We developed a web app that allows users to enter a list of symptoms they are experiencing. The app then uses a pre-trained Decision Tree Classifier model to predict the most likely disease based on the provided symptoms. Here's how it works:</p>
+
+        <ol>
+            <li><b><strong>Symptom Input:</strong></b> Users enter their symptoms through a user-friendly interface. The web app supports a wide range of symptoms, making it versatile for different scenarios.</li>
+            <li><b><strong>Machine Learning Model:</strong></b> We trained a Decision Tree Classifier using a dataset containing symptoms and corresponding diseases. The model is capable of predicting diseases based on input symptoms.</li>
+            <li><b><strong>Prediction:</strong></b> The app uses the model to predict the most likely disease, providing users with instant information about potential health concerns.</li>
+            <li><b><strong>Additional Information: </strong></b> To enhance user experience, the app also provides additional information about the predicted disease. This includes a description of the disease, recommended precautions, medications, dietary advice, and workout tips.</li>
+
+        </ol>
+
+        <h3>Key Features</h3>
+        <ul type="circle">
+            <li><b><strong>User-Friendly Interface:</strong></b> The web app boasts an intuitive and easy-to-navigate interface, ensuring that users can input their symptoms without any hassle.</li>
+            <li><b><strong>Accurate Predictions:</strong></b> Leveraging machine learning, our model provides accurate disease predictions based on the symptoms provided by the user.</li>
+            <li><b><strong>Comprehensive Information: </strong></b>In addition to predictions, the app offers comprehensive information about the predicted disease, including descriptions, precautions, medications, diet recommendations, and workout tips.</li>
+            <li><b><strong>ducational Content:</strong></b> To empower users with knowledge, the app includes informative blog posts about various health topics.</li>
+        </ul>
+
+        <br>
+        <div style="height:700px ;background-color:#837883e3" >
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner" style="text-align:center;padding-top:100px">
+    <div class="carousel-item active" >
+     <img  src="{{ url_for('static', filename='GRED.jpg') }}" alt="">
+    </div>
+    <div class="carousel-item">
+       <img  src="{{ url_for('static', filename='Impetigo.jpg') }}" alt="">
+    </div>
+    <div class="carousel-item">
+      <img  src="{{ url_for('static', filename='Asthma.jpg') }}" alt="">
+    </div>
+        <div class="carousel-item">
+      <img  src="{{ url_for('static', filename='Arthritis.jpg') }}" alt="">
+    </div>
+        <div class="carousel-item">
+      <img  src="{{ url_for('static', filename='Hyperglycemia.jpg') }}" alt="">
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+            </div>
+        <br>
+        <button style="background-color:#f174d2d6 ;margin-left:30%">
+         <h3>KNOW ABOUT SOME OF THE RARE DISEASES</h3> </button>
+        <br>
+        <br>
+        <p>According to a study on rare diseases published by Wakap et al. (2020), there are 6,172 unique rare diseases. Of the 6,172 unique rare diseases, Wakap et al. (2020) found that:</p>
+ <ul>
+     <li>69.9% (3,510 rare diseases)are exclusively paediatric onset</li>
+     <li>11.9% (600 rare diseases) are exclusively adult onset</li>
+     <li>18.2% (908 rare diseases) have onset spanning both paediatric and adult groups</li>
+ </ul>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div  style="background-color:#ddf4f5"  class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="background-color:pink" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+     <strong> Hutchinson-Gilford Progeria Syndrome (HGPS)</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        <ul>
+            <li> Discovery: There are different forms of Progeria, however the classic form is called Hutchinson-Gilford Progeria Syndrome, named after 2 English doctors who first described it: Dr. Jonathan Hutchinson in 1886 and Dr. Hastings Gilford in 1897.</li>
+       <li> Treatment: The cancer drug Lonafarnib was used in trials, showing improvements such as weight gain, improved hearing, bone structure and flexibility of blood vessels, however there’s still no cure for Progeria.</li>
+      <li> Symptoms: Baldness and enlarged heads with small faces, limited motion, hardening of the arteries, growth delays, hip dislocations and other debilitating symptoms</li>
+        </ul>
+      </div>
+    </div>
+      </div>
+       <div style="background-color:#ddf4f5"  class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="background-color:pink"class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+    <strong> Kuru</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse ">
+      <div class="accordion-body">
+        <ul>
+            <li>  Discovery: Occurring at epidemic levels in the ’50s and ’60s, it was eventually discovered by Daniel Carleton Gajdusek, whose research won him the 1976 Nobel Prize in Physiology or Medicine.</li>
+       <li> Treatment: There’s no treatment for Kuru, other than the preventative measure of not committing cannibalism</li>
+      <li> Symptoms: Tremors and muscle jerks (Kuru is the Fore tribe’s word for ‘shiver’), headaches and arm and leg pain, difficulty walking and swallowing, progressive and severe coordination problems.</li>
+        </ul>
+      </div>
+    </div>
+           </div>
+            <div style="background-color:#ddf4f5"  class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="background-color:pink" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          <strong>Fibrodysplasia ossificans progressive – Stoneman’s Disease </strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <ul>
+            <li> Discovery: The late Dr. Victor McKusick of Johns Hopkins University School of Medicine officially named the disease in the 1970’s.</li>
+       <li>  Treatment:No known cure. If surgically removed, the body creates even more bone growth in the area.</li>
+      <li>   Symptoms: Malformation of the big toe in newborns, painful fibrous nodules/tumor-like swellings, over the neck, back and shoulders, joint stiffness, low-grade fever, muscles replaced by bone tissue.</li>
+        </ul>
+      </div>
+    </div>
+                </div>
+                 <div style="background-color:#ddf4f5"   class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="background-color:pink"class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+   <strong>Parry–Romberg syndrome</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse ">
+      <div class="accordion-body">
+        <ul>
+            <li>Discovery: PRS was first mentioned in 1825 by Caleb Hillier Parry in his medical writings and Moritz Heinrich Romberg described it a second time in 1846. </li>
+       <li> Treatment: Immunosuppressive drugs may help as well as skin, fat, and tissue grafts, although in some cases the condition reverses and suddenly ceases. </li>
+      <li> Symptoms: Atrophy of the skin and connective tissues, usually on the face, hair loss, scarring, reduction of pigmentation in the skin, severe tissue pain, migraines, recession of the eye orbit and visual abnormalities such as drooping eyelids, nausea and vomiting, decreased swelling at the site, dental abnormalities </li>
+        </ul>
+      </div>
+    </div>
+                     </div>
+                         <div style="background-color:#ddf4f5"   class="accordion-item">
+    <h2 class="accordion-header">
+      <button  style="background-color:pink" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+      <strong>RPI Deficiency</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse ">
+      <div class="accordion-body">
+        <ul>
+            <li>Discovery: 1999 </li>
+       <li>Treatment: There are currently no treatments for this condition. </li>
+      <li>Symptoms: Damage to the optic nerves and involuntary eye movements, seizures, spasticity and developmental delays, balance and mobility problems, slowing of thought and speech </li>
+        </ul>
+      </div>
+    </div>
+                             </div>
+                                 <div style="background-color:#ddf4f5"   class="accordion-item">
+    <h2 class="accordion-header">
+      <button  style="background-color:pink" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStayOpen-collapseSix">
+      <strong>Morgellons</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse ">
+      <div class="accordion-body">
+        <ul>
+            <li> Discovery: Early 2000’s </li>
+       <li> Treatment: Therapy and topical treatment of the skin conditions, along with treatment for mental health issues such as depression and anxiety.</li>
+      <li>Symptoms: Itchiness, crawling, stinging and biting sensations, black hairs, threads or specks on or under the skin, Rashes and sores, Memory loss and confusion, changes in vision. </li>
+        </ul>
+      </div>
+    </div>
+                                     </div>
+                                         <div style="background-color:#ddf4f5"   class="accordion-item">
+    <h2 class="accordion-header">
+      <button  style="background-color:pink" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeven">
+      <strong>Methemoglobinemia</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse ">
+      <div class="accordion-body">
+        <ul>
+            <li> Discovery: 1943 </li>
+       <li>  Treatment: Supplemental oxygen and a drug called Methylene blue, which restores the iron in hemoglobin to its normal oxygen-carrying state.</li>
+      <li> Symptoms: Blueish colorization of the skin, shortness of breath, headaches and dizziness, loss of hairlines, changes in mental status, fatigue and exercise intolerance, anemia, cardiovascular and lung disease, bacteria and toxins in the tissues, seizures and Coma </li>
+        </ul>
+      </div>
+    </div>
+                                             </div>
+    <div style="background-color:#ddf4f5"   class="accordion-item">
+    <h2 class="accordion-header">
+      <button  style="background-color:pink" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="true" aria-controls="panelsStayOpen-collapseEight">
+   <strong> Microcephaly</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse ">
+      <div class="accordion-body">
+        <ul>
+            <li> Discovery: 2002 </li>
+       <li>Treatment: There are no treatments to correct the head size and there is no cure, however some individuals can grow normally and develop intelligence. Treating the symptoms with therapy can be helpful. </li>
+      <li>   Symptoms: Reduced life expectancy, neurological defects, reduced head size, dwarfism, delayed speech, hyperactivity, seizures and convulsions, impaired motor ability and clumsiness</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+                                     <br>
+        <h3>Conclusion</h3>
+        <p>Our Symptom-Based Disease Diagnosis Web App brings the power of machine learning and healthcare information to the fingertips of users. It serves as a valuable resource for individuals looking to gain insights into their health conditions quickly and conveniently. By combining technology and healthcare, we aim to make healthcare more accessible and user-centric.
+
+In an era where remote healthcare solutions are gaining prominence, this project represents a significant step forward in providing accessible and reliable healthcare information to the masses. We hope that this project will contribute to better health awareness and ultimately improve the well-being of individuals worldwide.</p>
+<br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+</head>
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+
+</div>
+<h5 style="color:white">medicalrecommendation223@gmail.com</h5>
+            <h5 style="color:white">+91 9145657823</h5>
+<div class="row">
+<ul>
+    <li><a href="/contact"><h5>Contact us</h5></a></li>
+    <li><a href="/index"><h5>Our Services</h5></a></li>
+    <li><a href="/blog"><h5>Blogs</h5></a></li>
+<li><a href="/ayurveda"><h5>Aurveda</h5></a></li>
+</ul>
+</div>
+
+<div style="margin-left:35%" class="row">
+INFERNO Copyright © 2025 Inferno - All rights reserved || Designed By: Priya
+</divstyle>
+</div>
+</footer>
+</html>
